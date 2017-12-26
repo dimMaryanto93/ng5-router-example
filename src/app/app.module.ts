@@ -3,11 +3,25 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { BooksComponent } from './books/books.component';
+import { BookItemComponent } from './books/book-item/book-item.component';
+import { AddBookComponent } from './books/add-book/add-book.component';
+import { EditBookComponent } from './books/edit-book/edit-book.component';
+import { BooksManagementComponent } from './books-management/books-management.component';
+import { BorrowBooksComponent } from './transaction/borrow-books/borrow-books.component';
+import { ReturnTheBooksComponent } from './transaction/return-the-books/return-the-books.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BooksComponent,
+    BookItemComponent,
+    AddBookComponent,
+    EditBookComponent,
+    BooksManagementComponent,
+    BorrowBooksComponent,
+    ReturnTheBooksComponent
   ],
   imports: [
     BrowserModule
