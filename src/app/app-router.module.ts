@@ -4,10 +4,19 @@ import {BooksComponent} from './books/books.component';
 import {HomeComponent} from './home/home.component';
 import {BooksManagementComponent} from './books-management/books-management.component';
 import {TransactionComponent} from './transaction/transaction.component';
+import {BookItemComponent} from './books/book-item/book-item.component';
+import {EditBookComponent} from './books/edit-book/edit-book.component';
+import {AddBookComponent} from './books/add-book/add-book.component';
 
 const appRouter: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'books', component: BooksComponent},
+  {
+    path: 'books', component: BooksComponent, children: [
+      {path: 'new', component: AddBookComponent},
+      {path: 'view/:id', component: BookItemComponent},
+      {path: 'update/:id', component: EditBookComponent}
+    ]
+  },
   {path: 'management', component: BooksManagementComponent},
   {path: 'transaction', component: TransactionComponent}
 ];
