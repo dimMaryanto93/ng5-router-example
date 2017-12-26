@@ -13,6 +13,7 @@ import {AppRouterModule} from './app-router.module';
 import {FormsModule} from '@angular/forms';
 import {TransactionComponent} from './transaction/transaction.component';
 import {HomeComponent} from './home/home.component';
+import {BookService} from './book.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import {HomeComponent} from './home/home.component';
     AppRouterModule,
     FormsModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
