@@ -1,3 +1,36 @@
-<p>
-  add-book works!
-</p>
+<h3>Add a book</h3>
+<hr/>
+<form #formBook="ngForm" (submit)="submitedBook($event)">
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" name="title" id="title" [(ngModel)]="book.title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Penerbit</label>
+    <input type="text" name="penerbit" id="penerbit" [(ngModel)]="book.penerbit" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Pengarang</label>
+    <input type="text" name="pengarang" id="pengarang" [(ngModel)]="book.pengarang" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Tanggal di-releash</label>
+    <input type="date" name="publishDate" id="publishDate" [(ngModel)]="book.publishDate" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Kategori</label>
+    <select name="kategori" id="kategori" [(ngModel)]="book.category" class="form-control">
+      <option *ngFor="let category of categories" [value]="category">{{category.nomorLoker}} | {{category.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">
+      <i class="fa fa-save"></i>
+      Save
+    </button>
+    <button type="reset" class="btn btn-default">
+      <i class="fa fa-backward"></i>
+      Reset
+    </button>
+  </div>
+</form>
