@@ -18,12 +18,6 @@
     <input type="date" name="publishDate" id="publishDate" [(ngModel)]="book.publishDate" class="form-control">
   </div>
   <div class="form-group">
-    <label>Kategori</label>
-    <select name="kategori" id="kategori" [(ngModel)]="book.category" class="form-control">
-      <option *ngFor="let category of categories" [value]="category">{{category.nomorLoker}} | {{category.name}}</option>
-    </select>
-  </div>
-  <div class="form-group">
     <button type="submit" class="btn btn-primary">
       <i class="fa fa-save"></i>
       Save

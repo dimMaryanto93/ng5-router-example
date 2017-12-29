@@ -1,17 +1,15 @@
-import {BookCategory} from './book-category.model';
+import {Category} from './category.model';
 
 export class CategoryService{
 
-  private _categories: BookCategory[] = [
-    new BookCategory('Pemograman', 101),
-    new BookCategory('Pemograman', 102),
-    new BookCategory('Komputer', 103),
-    new BookCategory('Bahasa', 104)
+  private _categories: Category[] = [
+    new Category('101', 'Pemograman'),
+    new Category('102', 'Ilmu komputer'),
+    new Category('103', 'Sastra')
   ];
 
   get categories(){
-    return this._categories.slice();
+    return this._categories;
   }
-
 
 }

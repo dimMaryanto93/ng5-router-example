@@ -1,6 +1,7 @@
 import {Book} from './book.model';
 import {Injectable} from '@angular/core';
 import {CategoryService} from './category.service';
+import {Category} from './category.model';
 
 @Injectable()
 export class BookService {
@@ -10,14 +11,16 @@ export class BookService {
       'Belajar Pemograman Java',
       new Date(),
       'Dimas Maryanto',
-      'PT. TDI',
-      categoryService.categories[0]),
+      'PT. TDI', [
+        new Category('101', 'Pemograman'),
+        new Category('102', 'Ilmu komputer')
+      ]),
       new Book(2,
         'Belajar membuat web dengan di Java',
         new Date('2017-10-10'),
         'Dimas Maryanto',
         'PT. Tabeldata infromatika',
-        categoryService.categories[1])
+        [])
     ];
   }
 

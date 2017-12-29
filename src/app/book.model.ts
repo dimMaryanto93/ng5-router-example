@@ -1,4 +1,4 @@
-import {BookCategory} from './book-category.model';
+import {Category} from './category.model';
 
 export class Book {
   constructor(public id: number,
@@ -6,7 +6,7 @@ export class Book {
               public publishDate: Date = new Date(),
               public pengarang: string,
               public penerbit: string,
-              public category: BookCategory) {
+              public categories: Category[]) {
 
   }
 
