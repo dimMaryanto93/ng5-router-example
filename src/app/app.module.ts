@@ -17,6 +17,7 @@ import {BookService} from './book.service';
 import {CategoryService} from './category.service';
 import {AuthService} from './auth.service';
 import {AuthGuard} from './auth-guard.service';
+import {ErrorPageComponent} from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {AuthGuard} from './auth-guard.service';
     BorrowBooksComponent,
     ReturnTheBooksComponent,
     TransactionComponent,
-    HomeComponent
+    HomeComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

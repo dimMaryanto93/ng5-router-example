@@ -8,6 +8,7 @@ import {BookItemComponent} from './books/book-item/book-item.component';
 import {EditBookComponent} from './books/edit-book/edit-book.component';
 import {AddBookComponent} from './books/add-book/add-book.component';
 import {AuthGuard} from './auth-guard.service';
+import {ErrorPageComponent} from './error-page/error-page.component';
 
 const appRouter: Routes = [
   {path: '', component: HomeComponent},
@@ -26,7 +27,13 @@ const appRouter: Routes = [
     path: 'transaction',
     canActivate: [AuthGuard],
     component: TransactionComponent
-  }
+  },
+  {
+    path: 'not-found',
+    component: ErrorPageComponent,
+    data: {message: 'Halaman tidak ditemukan'}
+  },
+  {path: '**', redirectTo: '/not-found'}
 ];
 
 @NgModule({
