@@ -15,6 +15,8 @@ import {TransactionComponent} from './transaction/transaction.component';
 import {HomeComponent} from './home/home.component';
 import {BookService} from './book.service';
 import {CategoryService} from './category.service';
+import {AuthService} from './auth.service';
+import {AuthGuard} from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import {CategoryService} from './category.service';
     AppRouterModule,
     FormsModule
   ],
-  providers: [BookService, CategoryService],
+  providers: [BookService, CategoryService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
